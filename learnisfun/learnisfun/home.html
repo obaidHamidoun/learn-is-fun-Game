@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Groups</title>
+
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!--instructions bar-->
+    <h1 class="point">+1</h1>
+    
+<div class="play" id="ccl">   
+      <div class="instructions">  
+        <p>  
+            للفوز في اللعبة <br>
+           عليك بتصنيف الحيوانات حسب نوعها في المكان الصحيح <br>
+           ! حظا موفقا 
+           </p>
+      </div>
+          <button id="close" class="click" onclick="hide()">    
+            ابدأ
+          </button>
+    <div class="robot">
+        <!-- <img src="image/o2-o2robot.gif" alt="robot"> -->
+    </div>
+</div>
+
+    <!--side nav --> 
+
+    <aside id="aside">
+
+        <div class="logodiv" id="logo" onclick="slide()">
+        <img src="image/Background.png" alt="learn is fun logo"class="logo">
+        </div>
+
+        <div class="animalsdiv">
+
+        <div class="cow animal" >
+           <img src="image/cow-6129375-5011619.png" draggable="true" alt="cow" id="cow" ondragstart="drag(event)" >
+        </div>
+
+
+
+        <div class="loobster animal" >
+           <img src="image/lobster.webp"  draggable="true" alt="loobster" id="loobster" ondragstart="drag(event)" >
+        </div>
+
+        <div class="cat animal" > 
+           <img src="image/cat.webp" draggable="true"  alt="cat" id="cat" ondragstart="drag(event)" >
+        </div>
+
+        <div class="frog animal"> 
+           <img src="image/frog.webp" draggable="true" alt="frog" id="frog" ondragstart="drag(event)">
+        </div>
+
+        <div class="crocodile animal" > 
+            <img src="image/crocodile.webp" draggable="true" alt="crocodile" id="crocodile" ondragstart="drag(event)" >
+        </div>
+
+        <div class="snake animal">
+            <img src="image/snake.webp"  draggable="true" alt="snake" id="snake" ondragstart="drag(event)">
+        </div>
+ 
+        <div class="snail animal">
+        <img src="image/snail.png" draggable="true" alt="snail" id="snail" ondragstart="drag(event)">
+        </div>
+
+        <div class="bunny animal"> 
+            <img src="image/bunny.webp" draggable="true" alt="bunny" id="bunny" ondragstart="drag(event)">
+        </div>
+
+        <div class="turtle animal">  
+            <img src="image/turtle.webp" draggable="true" alt="turtle" id="turtle" ondragstart="drag(event)">
+        </div>
+
+</div>
+    </aside> 
+
+<!-- header-->
+
+<div class="headerandsection">
+
+     <header id="header">
+           <div class="top">
+              <div class="close" id="close" onclick="hideback()"></div> 
+           </div>
+           <div class="list"> 
+            <ul>
+                <li>How to play</li>
+                <li>Other games</li>
+                <li>Who are we ?</li>
+            </ul>
+           </div>
+        <div></div>
+     </header>
+
+
+<section id="section">
+<div class="dropped">
+    <div class="group1"  >
+        <div class="circle1" ondrop="drop(event)" ondragover="allowDrop(event)" data-expected-animal="cow" data-expected-2nd-animal="cat" third="bunny"  ></div>
+        <div class="circle2" ondrop="drop(event)" ondragover="allowDrop(event)"
+          data-expected-animal="cow" data-expected-2nd-animal="cat" third="bunny"></div>
+        <div class="circle3" ondrop="drop(event)" ondragover="allowDrop(event)" data-expected-animal="cow" data-expected-2nd-animal="cat" third="bunny" ></div>
+    </div>
+
+    <div class="group2"> 
+        <div class="circle4" ondrop="drop(event)" ondragover="allowDrop(event)"
+          data-expected-animal="frog" data-expected-2nd-animal="loobster" third="crocodile" ></div>
+        <div class="circle5" ondrop="drop(event)" ondragover="allowDrop(event)" 
+          data-expected-animal="frog" data-expected-2nd-animal="loobster" third="crocodile"></div>
+        <div class="circle6" ondrop="drop(event)" ondragover="allowDrop(event)" 
+          data-expected-animal="frog" data-expected-2nd-animal="loobster" third="crocodile" ></div>
+    </div>
+
+    <div class="group3">  
+        <div class="circle7" ondrop="drop(event)" ondragover="allowDrop(event)" 
+          data-expected-animal="snail" data-expected-2nd-animal="snake" third="turtle" ></div>
+        <div class="circle8" ondrop="drop(event)" ondragover="allowDrop(event)"           data-expected-animal="snail" data-expected-2nd-animal="snake" third="turtle"></div>
+        <div class="circle9" ondrop="drop(event)" ondragover="allowDrop(event)"           data-expected-animal="snail" data-expected-2nd-animal="snake" third="turtle"></div>
+    </div>
+</div>
+ <!-- group names -->
+<div class="names">
+    <div class="groupname1">  
+        <h1> الثديات </h1>  
+    </div>
+
+    <div class="groupname2">
+        <h1> البرمائيات </h1>  
+    </div>
+
+    <div class="groupname3">
+        <h1> الزواحف </h1>  
+    </div>
+</div>
+<div class="level">
+    <div class="progress"></div>
+</div>
+</div>
+
+
+
+
+</section>
+
+<script src="main.js"></script>
+
+
+
+
+<!-- article-->
+
+
+
+
+</body>
+</html>

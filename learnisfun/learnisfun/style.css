@@ -1,0 +1,480 @@
+/* keyframes */
+
+
+@keyframes zoomanimation{
+    0%{
+    transform: scale(0 , 0);
+    
+    }
+     50%{
+    transform: scale(110%,110%) ;
+    
+     }
+    
+    100%{
+    transform: scale(100%);
+    }}
+
+@keyframes point {
+    0%{font-size: 10px;visibility: none;opacity: 0;top: 88%;}
+    50%{font-size: 30px;visibility: visible;opacity: 100%;top: 82%;}
+    100%{font-size: 10px;visibility: none;opacity: 0;top: 85%;}
+}
+
+@keyframes slide{
+0%{visibility: none; opacity: 0;margin-left:-50vmin; }
+100%{visibility: visible;opacity: 100%;margin-left:0.5vmin; }
+}
+@keyframes slideBack{
+    0%{visibility: visible;opacity: 100%;margin-left:0.5vmin; }
+    100%{visibility: none; opacity: 0;margin-left:-50vmin; }
+    }
+
+
+@keyframes blur{
+0%{filter: blur(100%);}
+100%{filter: blur(0vmin);}
+}
+
+@keyframes out{
+0%{opacity: 100%;}
+100%{opacity:0%;display: none;}
+}
+/* media screen */
+
+
+/* font uploader */
+
+@font-face {
+    font-family: MyFont;
+    src: url(alfoont.ttf);
+}
+
+
+@media  screen  and (max-width : 650px) {
+    body{
+        display: flex;flex-direction: column;
+        overflow: scroll;
+    }
+    aside{
+        background-color:rgba(255, 255, 255, 0.6);
+        backdrop-filter: blur(4vmin);
+         width: 98% !important; height: 20vmin !important;
+         text-align: center;  
+         vertical-align: middle;
+         margin-top:1vmin ;
+         filter: blur(8px);display: flex !important;
+         justify-content: space-around;
+         z-index: 12;}
+        .animalsdiv{
+            display: flex;
+            border: 1px black solid;
+                overflow: scroll;
+                margin-top: 6vmin;
+                height: 7vmin;
+                scrollbar-width:none;
+                
+        }
+}
+
+/* body */
+body{
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin:0px;padding:0px;
+    background-color: #AEE2FF;
+    display: flex;
+    width: auto;;
+    overflow: hidden;
+  font-family: MyFont !important;
+  letter-spacing: 3px;
+    }  
+/* instructions bar */
+.guidepara{
+    width: 400px20px;
+    height: 250px20px;
+    float: right;
+    top:-5%;
+    right:4%;
+    text-align: center;
+    overflow: hidden;
+    position: absolute;
+}
+.play{
+overflow: hidden;
+background-color: rgba(255, 255, 255);
+backdrop-filter: blur(1vmin);
+box-shadow: 1px 10px 14px rgba(89, 133, 161, 0.6);
+border-radius: 12vmin;
+width: 125vmin;height:65vmin;
+position: absolute;
+top: 50%;left: 50%;
+transform: translate(-50% , -50%);
+z-index: 13;
+animation: play 1s ease-in-out both;
+border: dashed 2px rgb(122, 204, 255 , 0.8);
+}
+.instructions{
+    width: 80vmin;height: 40vmin;
+    float: right;
+    text-align: center;
+    margin-top: 4vmin;
+}
+
+.instructions p{
+margin: auto;
+font-size: 29px;color:rgb(122, 204, 255);
+}
+.robot{
+width: 124.5vmin;
+height: 100%;
+position: relative;
+background: url(image/o2-o2robot.gif);
+background-repeat: no-repeat;
+/* background-size:cover 50vmin 40vmin ; */
+background-position:-25% 0%;
+}  
+
+/* side nav */
+aside{
+background-color:rgba(255, 255, 255, 0.6);
+backdrop-filter: blur(4vmin);
+ width: 22vmin; height: 98vmin;
+ border-top-right-radius:6vmin ; 
+ border-bottom-right-radius: 6vmin;
+ text-align: center; 
+ position: relative;
+ align-items: center;
+ display: flex;
+ flex-direction: column;
+ /* overflow: hidden; */
+ margin-top:1vmin ;
+ filter: blur(8px);
+ z-index: 12;
+}
+.logo{
+transition: width 0.5s , height 0.5s  ,left 0.5s, box-shadow 0.5s;
+cursor: pointer;
+border-radius: 8vmin;
+position: absolute;
+left: 4vmin;
+width: 15vmin;
+height: 15vmin;
+animation: zoomanimation 0.8s ease-in-out both;
+    }
+.logo:hover{
+width: 17vmin;
+height: 17vmin;
+left: 3vmin;
+ }
+.animalsdiv::-webkit-scrollbar{
+display: none;
+}  
+/*the start*/
+
+.click{
+border: rgb(122, 204, 255) 1px double;
+width: 40vmin;height: 15vmin;
+position: absolute;
+z-index: 3;
+left: 65vmin;top: 44vmin;
+border-radius: 100px;
+font-size: 50px;
+background-color:rgba(255, 255, 255, 0);
+color:rgb(122, 204, 255);
+cursor:pointer;
+box-shadow: 0px 10px 0px rgb(122, 204, 255);
+transition: box-shadow 0.3s , background-color 0.3s , color 0.3s , top 0.3s;
+background-color: rgba(255, 255, 255, 0.4);
+backdrop-filter: blur(5px);
+}
+.click:hover{
+top: 46vmin;
+box-shadow: 0px 0px 0px   rgb(122, 204, 255)
+}
+
+.logodiv{
+width: 80px;height: 80px;
+text-align: center;
+margin-left: 38px;margin-top: 10px;
+border-radius: 70px;
+overflow: hidden;
+}
+
+/*    animals    */
+.animalsdiv{
+overflow: scroll;
+margin-top: 6vmin;
+height: 76vmin;
+scrollbar-width:none;
+}
+.animalsdiv>div>img{
+    cursor: grab;
+}
+.cow img{
+width: 20vmin;
+height: 20vmin;
+margin:auto;
+}
+.loobster img{
+width: 20vmin;height: 20vmin;
+margin:auto;
+}
+.cat img{
+width: 20vmin;height: 20vmin;
+margin:auto;
+}
+.frog img{
+width: 20vmin;height:20vmin;
+margin:auto;
+}
+.crocodile img{
+width:20vmin;height: 20vmin;margin:auto;
+}
+.snake img{
+width: 20vmin;
+height: 20vmin;
+margin:auto;
+}
+.snail img{
+width: 20vmin;height: 20vmin;margin:auto;
+}
+.bunny img{
+width: 20vmin;
+height:20vmin;
+margin:auto;
+}
+.turtle img{
+width: 20vmin;height: 20vmin;
+margin:auto;
+}
+.animal{
+height: 20vmin;
+}
+
+/* header */
+.headerandsection{
+display: flex;
+flex-direction: column;
+width: 89.5%;
+}
+header{
+background-color: rgba(255, 255, 255,0.6);
+margin-left:0.5vmin; 
+border-radius:6vmin;
+height: 97vmin;width: 62vmin;
+position: absolute;
+top: 2vmin;backdrop-filter:blur(4vmin) ;
+z-index: 10;
+display: none;
+overflow: hidden;
+}
+.top{
+width: 100%;
+height: 15vmin;
+}
+.close{
+height: 6vmin;
+width: 6vmin;
+position: absolute;
+right: 2vmin;
+top: 3.5vmin;
+background-image: url(image/close\ icon.png);
+background-size: cover;
+cursor: pointer;
+opacity: 50%;
+transition: height 0.4s , width 0.4s , transform 0.4s , opacity 0.4s;
+}
+.close:hover{
+transform: rotateZ(90deg);
+opacity: 100%;
+}
+.animatedtextdiv{
+overflow: hidden;
+height: 100% ; width : 100%;
+border-radius : 50px;text-align: center;
+}
+.animatedtextdiv p{
+text-overflow: clip;
+margin: auto ;
+font-size: 1.6em;
+animation: textanimation 15s ease-in-out infinite;
+}
+.list{
+height: 100%;
+margin: 0;text-align: center;
+}
+.list ul{margin:0;list-style-type: none;}
+.list li{margin:0;font-size: 4vh;transition:all 0.2s;color: orangered;cursor: pointer;}
+.list li:hover{
+    font-size: 4.5vh
+}
+/* section */
+section{
+background-color: rgba(255, 255, 255, 0.6) ;
+backdrop-filter: blur(4vmin);
+height: 97vmin; border-radius: 6vmin;
+margin-left: 0.5vmin;
+width: 99%;top: -1vmin;
+margin-top: 2vmin;display: flex;
+filter: blur(8px);
+z-index: 9;
+overflow: hidden;
+}
+/* group 1 */
+.group1{
+ width: 60vmin;height: 60vmin;
+ box-shadow:0px 6px 6px 1px rgb(182, 200, 255 ,0.6) inset;
+ background-color: rgba(255, 255, 255, 0.4);
+ backdrop-filter: blur(2vmin);
+ position:relative;
+ border-radius: 100%;
+ overflow: hidden;
+}
+.circle1{
+border-radius: 100%; 
+border: 2px rgb(165, 188, 255 , 0.6) solid;
+width: 22vmin;height: 22vmin;
+margin: auto;margin-top: 5vmin;
+}
+.circle1 img{
+width: 18vmin;height: 18vmin;
+transform: translate(12.5%,10%);
+
+}
+.circle2{
+    border-radius: 100%; 
+    border: 2px rgb(165, 188, 255 , 0.6) solid;
+    width: 22vmin;height: 22vmin;margin-left: 6vmin;
+}
+.circle2 img{
+    width: 18vmin;height: 18vmin;
+    transform: translate(12.5%,10%);
+    }
+.circle3{
+    border-radius: 100%; 
+    border: 2px rgb(165, 188, 255 , 0.6) solid;
+    width: 22vmin;height: 22vmin;margin-left: 31vmin;margin-top: -22.7vmin;
+}
+.circle3 img{
+    width: 18vmin;height: 18vmin;
+    transform: translate(12.5%,10%);
+    }
+/* group 2 */
+.group2{
+    width: 60vmin;height: 60vmin;
+    box-shadow:0px 6px 6px 1px rgb(182, 200, 255 ,0.6) inset;
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(2vmin);
+    position:relative;
+    border-radius: 100%;
+    overflow: hidden;
+   }
+.circle4{
+    border-radius: 100%; 
+    border: 2px rgb(165, 188, 255 , 0.6) solid;
+    width: 22vmin;height: 22vmin;
+    margin: auto;margin-top: 5vmin;
+}
+.circle4 img{
+    width: 18vmin;height: 18vmin;
+    transform: translate(12.5%,10%);
+    }
+.circle5{
+    border-radius: 100%; 
+    border: 2px rgb(165, 188, 255 , 0.6) solid;
+    width: 22vmin;height: 22vmin;margin-left: 6vmin;
+}
+.circle5 img{
+    width: 18vmin;height: 18vmin;
+    transform: translate(12.5%,10%);
+    }
+.circle6{
+    border-radius: 100%; 
+    border: 2px rgb(165, 188, 255 , 0.6) solid;
+    width: 22vmin;height: 22vmin;margin-left: 31vmin;margin-top: -22.7vmin;
+}
+.circle6 img{
+    width: 18vmin;height: 18vmin;
+    transform: translate(12.5%,10%);
+    }
+/* group 3 */
+.group3{
+    width: 60vmin;height: 60vmin;
+    box-shadow:0px 6px 6px 1px rgb(182, 200, 255 ,0.6) inset;
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(2vmin);
+    position:relative;
+    border-radius: 100%;
+    overflow: hidden;
+   }
+   .circle7{
+    border-radius: 100%; 
+    border: 2px rgb(165, 188, 255 , 0.6) solid;
+    width: 22vmin;height: 22vmin;
+    margin: auto;margin-top: 5vmin;
+}
+.circle7 img{
+    width: 18vmin;height: 18vmin;
+    transform: translate(12.5%,10%);
+    }
+    .circle8{
+        border-radius: 100%; 
+        border: 2px rgb(165, 188, 255 , 0.6) solid;
+        width: 22vmin;height: 22vmin;margin-left: 6vmin;
+    }
+.circle8 img{
+    width: 18vmin;height: 18vmin;
+    transform: translate(12.5%,10%);
+    }
+    .circle9{
+        border-radius: 100%; 
+        border: 2px rgb(165, 188, 255 , 0.6) solid;
+        width: 22vmin;height: 22vmin;margin-left: 31vmin;margin-top: -22.7vmin;
+    }
+.circle9 img{
+    width: 18vmin;height: 18vmin;
+    transform: translate(12.5%,10%);
+    }
+/* groups names */
+
+.group1 , .group2 ,.group3{
+    margin-top: 4vmin;
+    margin-right: 5vmin;
+}
+
+.names{
+width: 100%;position: absolute;
+display: flex;flex-direction: row;justify-content: space-around;
+bottom:10vmin
+}
+.names{
+color:rgb(135, 165, 255); font-size: 1.5em;
+}
+.level{
+outline:2px rgb(226, 242, 255) solid;width: 90vmin;height: 8vmin;overflow: hidden;
+position: absolute;left: 50%;top: 90%;transform: translate(-50%,-50%);border-radius:4vmin ;
+background-color: rgb(255, 255, 255);
+}
+.progress{
+background-color:rgb(135, 165, 255);border-radius:4vmin;
+height: 100%;width: 0vmin;
+}
+
+.point{
+    font-size: 20px;position: absolute;top: 82%;
+    z-index: 13;left: 30%;color:rgb(135, 165, 255);
+    text-shadow: rgb(190, 229, 255) 0px 0px 40px;
+    visibility: hidden;
+}
+
+.dropped{
+display: flex;}
+
+.animal{
+transition: all 0.2s;
+}
+.animal:hover{
+filter: drop-shadow(0px 0px 8px linear-gradiant(to right,red,green));
+}
+
